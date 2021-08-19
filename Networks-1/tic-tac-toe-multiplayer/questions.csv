@@ -1,0 +1,10 @@
+Qual a complexidade de tempo do método Linear Search?,O(log2 n),O(n),1
+Qual a complexidade de tempo do método Binary Search?,O(log2 n),O(n),0
+Qual a complexidade de tempo do método Ternary Search?,O(log3 n),O(log2 n),0
+Qual a complexidade de espaço do método Linear Search recursivo?,O(1),O(n),1
+Qual a complexidade de espaço do método Binary Search iterativo?,O(log2 n),O(1),1
+Qual a complexidade de espaço do método Ternary Search recursivo?,O(log3 n),O(1),0
+Qual o nome desta sequência (0 1 1 2 3 5 ...)?,Fibonacci,Juggler,0
+Qual o nome desta sequência (1 1 1 2 2 3 4 5 ...)?,Aliquot,Padovan,1
+Qual a forma mais eficiente de calcular 2^n?,1 << n,Math.pow(2. n),0
+Em qual método pode ser aplicado a programação dinâmica?,Caminho de custo mínimo,Jump Search,0
