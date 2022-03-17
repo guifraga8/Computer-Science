@@ -1,0 +1,17 @@
+Aluno: Guilherme Closs Fraga
+Disciplina: Laboratório de Sistemas Operacionais
+Data: 16/06/2020
+
+- Altere o programa para ficar em um loop infinito.
+- Utilizando os programas estudados na aula prática.
+passada, analise a alocação da memória do programa.
+- O que é possível visualizar?
+- Descreva a análise em um relatório para ser postado no
+Moodle.
+
+A função malloc() aloca um bloco de memória "disponível" do tamanho especificado e retorna um ponteiro do tipo nulo,
+até que seja liberada usando a função free() ou executar um realloc(), que é capaz de mover os dados para uma memória
+diferente e liberar o local da memória antiga. Assim, alterando o programa, e inserindo um laço de iteração (for)
+para gerar um loop inifinto, após algumas iterações, o malloc() falhará. Como não é verificado o valor de retorno do malloc,
+não há nada para interromper o ciclo. Com o intervalo, ele acaba saindo do malloc() quando retorna NULL. Normalmente, o SO
+reivindicará toda a memória assim que o programa sair, embora seja uma boa prática liberá-lo corretamente.

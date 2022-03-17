@@ -1,0 +1,97 @@
+Aluno: Guilherme Closs Fraga
+Disciplina: Laboratório de Sistemas Operacionais
+Data: 09/06/2020
+
+Atividade 10 - Questões e respostas:
+
+1. Executar o comando free e descrever a quantidade de memória livre e utilizada no sistema.
+Exemplo:
+guifraga@guifraga-VirtualBox:~$ free
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:       6088872     1286492     1154844      115248     3647536     4391384
+Swap:        728520           0      728520
+
+2. Executar o comando free para visualizar a quantidade total de memória do sistema, ocultando a linha com informações sobre os buffers, a cada 5 segundos.
+Exemplo:
+guifraga@guifraga-VirtualBox:~$ free --mega -s 5 -c 5
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:          6235        1408        1086         117        3740        4406
+Swap:           746           0         746
+
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:          6235        1408        1086         117        3740        4406
+Swap:           746           0         746
+
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:          6235        1408        1086         117        3740        4406
+Swap:           746           0         746
+
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:          6235        1408        1086         117        3740        4406
+Swap:           746           0         746
+
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:          6235        1408        1086         117        3740        4406
+Swap:           746           0         746
+guifraga@guifraga-VirtualBox:~$ 
+
+3. Instale o gnuplot e crie um gráfico para mostrar o uso da memória, por exemplo: gnuplot> plot 'dados.dat' using 1:3 title 'Coluna 3' with line.
+
+4. Através do comando memstat, concatenado com o comando sort é possível ordenar para visualizar os processos que mais estão consumindo memória. Indique os 5 processos que estão mais consumindo memória. Indique os 5 processos que mais compartilham recursos com outros processos.
+Exemplo:
+guifraga@guifraga-VirtualBox:~$ memstat | sort -n
+...
+2149164k: PID 30163 (/usr/lib/firefox/firefox)
+2182732k: PID 30131 (/usr/lib/firefox/firefox)
+2397756k: PID  1617 (/usr/bin/gnome-shell)
+2401880k: PID 30297 (/usr/lib/firefox/firefox)
+2512144k: PID 29848 (/usr/lib/firefox/firefox)
+
+5. Pesquise sobre o comando vmstat, no help do comando, utilizando o comando man, e escreva a descrição dos campos apresentados:
+- Procs: r e b
+- Memory: swpd, free, buff e cache
+- Swap: si e so
+- I/O: bi e bo
+- System: in e cs
+- CPU: us, sy, id, wa e st
+
+Procs
+    r: Número de processos executáveis ​​(executando ou aguardando o tempo de execução).
+    b: Número de processos em suspensão ininterrupta.
+
+Memory
+    swpd: Quantidade de memória virtual usada.
+    free: Quantidade de memória inativa.
+    buff: Quantidade de memória usada como buffers.
+    cache: Quantidade de memória usada como cache.
+
+Swap
+    si: Quantidade de memória trocada (swapped) do disco (/s).
+    so: Quantidade de memória trocada (swapped) para o disco (/s).
+
+I/O
+    bi: Blocos recebidos de um dispositivo de bloco (blocks/s).
+    bo: Blocos enviados para um dispositivo de bloco (blocks/s).
+
+System
+    in: Número de interrupções por segundo, incluindo o clock.
+    cs: Número de opções de contexto por segundo.
+
+CPU
+    Porcentagens do tempo total da CPU.
+    us: Tempo gasto executando código que não é do kernel. (tempo do usuário)
+    sy: Tempo gasto executando o código do kernel. (hora do sistema)
+    id: Tempo ocioso. Prior to Linux 2.5.41, this includes IO-wait time.
+    wa: Tempo gasto aguardando IO. Prior to Linux 2.5.41, included in idle.
+    st: Tempo roubado de uma máquina virtual. Prior to Linux 2.6.11, unknown.
+
+6. Executar o comando vmstat e descrever a quantidade de:
+– Page ins
+– Page outs
+
+De acordo com o exemplo abaixo, o número de Page ins (si) é 0 e o número de Page outs (so) também é 0.
+Exemplo:
+guifraga@guifraga-VirtualBox:~$ vmstat
+procs -----------memória--------- ---swap-- ----e/s---- -sistema- ------cpu-----
+ r  b   swpd  livre   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0      0 1173684  50420 3598116    0    0   290   502  335 1125 10  3 87  0  0

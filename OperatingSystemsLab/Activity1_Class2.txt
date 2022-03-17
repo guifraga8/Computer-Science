@@ -1,0 +1,179 @@
+Aluno: Guilherme Closs Fraga
+Disciplina: Laboratório de Sistemas Operacionais
+Data: 17/03/2020
+
+Atividade 01 – Questões e respostas:
+ 
+1. Qual comando apresenta os usuários logados? Dê um exemplo.
+O comando para apresentar os usuários logados é o comando who.
+Exemplo: 
+guifraga@guifraga-VirtualBox:~$ who
+guifraga :0           2020-03-16 22:54 (:0)
+
+2. Qual a diferença entre ls -1 e ls -l? e o ls -la? Mostre um exemplo.
+O comando ls -1 lista um arquivo por linha . O comando ls -l faz uma listagem mostrando dono, grupo e tamanho dos arquivos. O comando ls -la faz uma listagem exatamente como o ls -l, porém, ls -la lista também os arquivos ocultos.
+Exemplo ls -1:
+guifraga@guifraga-VirtualBox:~$ ls -1
+'Área de Trabalho'
+Documentos
+Downloads
+Imagens
+Modelos
+Música
+Público
+Vídeos
+
+Exemplo ls -l:
+guifraga@guifraga-VirtualBox:~$ ls -l
+total 32
+drwxr-xr-x 2 guifraga guifraga 4096 mar 11 10:19 'Área de Trabalho'
+drwxr-xr-x 2 guifraga guifraga 4096 mar 11 10:19  Documentos
+drwxr-xr-x 2 guifraga guifraga 4096 mar 11 10:19  Downloads
+drwxr-xr-x 2 guifraga guifraga 4096 mar 11 10:19  Imagens
+drwxr-xr-x 2 guifraga guifraga 4096 mar 11 10:19  Modelos
+drwxr-xr-x 2 guifraga guifraga 4096 mar 11 10:19  Música
+drwxr-xr-x 2 guifraga guifraga 4096 mar 11 10:19  Público
+drwxr-xr-x 2 guifraga guifraga 4096 mar 11 10:19  Vídeos
+
+Exemplo ls -la:
+guifraga@guifraga-VirtualBox:~$ ls -la
+total 84
+drwxr-xr-x 17 guifraga guifraga 4096 mar 16 22:55  .
+drwxr-xr-x  3 root     root     4096 mar 11 09:49  ..
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:19 'Área de Trabalho'
+-rw-------  1 guifraga guifraga   20 mar 11 10:35  .bash_history
+-rw-r--r--  1 guifraga guifraga  220 mar 11 09:49  .bash_logout
+-rw-r--r--  1 guifraga guifraga 3771 mar 11 09:49  .bashrc
+drwxr-x--- 15 guifraga guifraga 4096 mar 16 22:55  .cache
+drwxr-x--- 12 guifraga guifraga 4096 mar 11 10:21  .config
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:19  Documentos
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:19  Downloads
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:21  .fontconfig
+drwx------  3 guifraga guifraga 4096 mar 11 10:28  .gnupg
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:19  Imagens
+drwx------  3 guifraga guifraga 4096 mar 11 10:18  .local
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:19  Modelos
+drwx------  5 guifraga guifraga 4096 mar 16 22:55  .mozilla
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:19  Música
+-rw-r--r--  1 guifraga guifraga  807 mar 11 09:49  .profile
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:19  Público
+drwx------  2 guifraga guifraga 4096 mar 11 10:28  .ssh
+drwxr-xr-x  2 guifraga guifraga 4096 mar 11 10:19  Vídeos
+
+3. O que faz o df -h? Exemplifique.
+O comando df -h mostra o espaço livre e ocupado em MB, KB, GB em vez de bloco.
+Exemplo:
+guifraga@guifraga-VirtualBox:~$ df -h
+Sist. Arq.      Tam. Usado Disp. Uso% Montado em
+udev            2,9G     0  2,9G   0% /dev
+tmpfs           595M  1,3M  594M   1% /run
+/dev/sda1        15G  6,6G  7,4G  47% /
+tmpfs           3,0G   85M  2,9G   3% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+tmpfs           3,0G     0  3,0G   0% /sys/fs/cgroup
+/dev/loop1       15M   15M     0 100% /snap/gnome-characters/317
+/dev/loop2      1,0M  1,0M     0 100% /snap/gnome-logs/81
+/dev/loop0      150M  150M     0 100% /snap/gnome-3-28-1804/71
+/dev/loop3      4,3M  4,3M     0 100% /snap/gnome-calculator/501
+/dev/loop4       90M   90M     0 100% /snap/core/7917
+/dev/loop5       55M   55M     0 100% /snap/core18/1223
+/dev/loop6       45M   45M     0 100% /snap/gtk-common-themes/1353
+/dev/loop7       55M   55M     0 100% /snap/core18/1668
+/dev/loop8       92M   92M     0 100% /snap/core/8689
+tmpfs           595M   32K  595M   1% /run/user/1000
+/dev/loop9      1,0M  1,0M     0 100% /snap/gnome-logs/93
+/dev/loop10      15M   15M     0 100% /snap/gnome-characters/495
+/dev/loop11     4,4M  4,4M     0 100% /snap/gnome-calculator/704
+/dev/loop12      45M   45M     0 100% /snap/gtk-common-themes/1440
+/dev/loop13     161M  161M     0 100% /snap/gnome-3-28-1804/116
+
+4. O que faz o cd ~? Exemplifique.
+O comando cd ~ retorna para o diretório “home”, o diretório inicial.
+Exemplo:
+guifraga@guifraga-VirtualBox:~/teste1$ cd ~
+guifraga@guifraga-VirtualBox:~$
+
+5. O que faz o pwd? Exemplifique.
+O comando pwd mostra o diretório em que você está atualmente.
+Exemplo:
+guifraga@guifraga-VirtualBox:~$ pwd
+/home/guifraga
+ 
+6. Execute ls | wc -l. O que ele faz?
+ Esse comando conta e exibe o número total de arquivos existentes no diretório atual.
+
+7. O que faz o touch? Exemplifique.
+O comando touch cria um arquivo vazio.
+Exemplo:
+guifraga@guifraga-VirtualBox:~/teste1$ touch testeArquivo1
+guifraga@guifraga-VirtualBox:~/teste1$
+
+8. Qual comando exibe o calendário atual?
+O comando cal exibe o calendário atual.
+ 
+9. Qual comando para armazenar o calendário atual em um arquivo?
+O comando seria “cal > {nome de um arquivo qualquer}”, que será nesse arquivo onde a informação do calendário atual será armazenada.
+
+10. Qual comando exibe a data e o hora atual na tela?
+O comando date exibe data e hora atual na tela.
+ 
+11. Qual comando altera a senha do usuário atual?
+Comando “passwd {nome do usuário}” altera a senha do usuário atual.
+
+12. Crie um arquivo texto contendo a data e hora atual sucedido do calendário, após exiba o conteúdo deste arquivo em tela.
+ guifraga@guifraga-VirtualBox:~/teste1$ date > arquivo.txt
+guifraga@guifraga-VirtualBox:~/teste1$ cal >> arquivo.txt
+guifraga@guifraga-VirtualBox:~/teste1$ cat arquivo.txt
+ter mar 17 01:08:23 -03 2020
+     Março 2020       
+do se te qu qu se sá  
+ 1  2  3  4  5  6  7  
+ 8  9 10 11 12 13 14  
+15 16 17 18 19 20 21  
+22 23 24 25 26 27 28  
+29 30 31              
+ 
+13. Crie uma subpasta e copie o arquivo para a subpasta.
+guifraga@guifraga-VirtualBox:~/teste1$ mkdir teste2
+guifraga@guifraga-VirtualBox:~/teste1$ cp arquivo.txt teste2
+
+14. Remova o arquivo original.
+guifraga@guifraga-VirtualBox:~/teste1$ rm arquivo.txt
+
+15. Grave em um arquivo o log dos processos em execução no momento.
+guifraga@guifraga-VirtualBox:~$ top > log.txt
+
+16. O que faz o comando mkdir aula & cd aula?
+O comando mkidr aula irá criar uma pasta (diretório) chamada aula e o comando cd acessará o diretório aula.
+ 
+17. O que faz o comando cd ; pwd?
+O comando cd ; pwd “concatena” duas funções. Primeiro, ele desce uma pasta no diretório e logo exibe em qual pasta você está atualmente.
+ 
+18. O que faz o comando cd .. ; pwd?
+O comando cd ; pwd realiza a mesma operação que o comando da questão 17.
+ 
+19. O que faz o comando echo /dev/sd[ab]*?
+O comando “echo” serve para exibir algo para o usuário. Nesse caso aqui, esse comando irá exibir /dev/sda /dev/sda1. O conteúdo entre os colchetes com o asterisco fora, faz com que o comando procure para exibir o disco detectado que comece com um dos caracteres inseridos dentro dos colchetes, seguido de qualquer coisa após encontrar o respectivo caractere, por uma ordem de precedência. Por isso o sda é exibido ao invés de sdb. Em seguida exibe sda1, a primeira partição do disco sda.
+
+20. Execute mkdir teste. O que ele faz?
+O comando mkdir cria uma pasta nova (ou seja, diretório). Nesse caso, com o nome “teste”.
+ 
+21. Execute agora o mv teste test. O que ele faz?
+O comando mv teste test, move o arquivo test para dentro da pasta (diretório) teste.
+ 
+22. Execute o date > a.txt. O que ocorre?
+Esse comando irá salvar a data e hora atual dentro do arquivo a com extensão .txt.
+ 
+23. Depois o date >> a.txt; date >> a.txt; date >> a.txt
+Cada comando date >> a.txt irá adicionar em uma nova linha a data atual.
+
+24. Após cat a.txt | sort - r | less
+Esse comando irá ler e executar o arquivo.
+
+25. Qual comando para ver o uso da memória RAM? Como exibir em Gigabytes?
+O comando que exibe o uso da memória RAM é o comando free, e para exibi-lo em Gigabytes basta inserir -g a seguir. Logo, seria free -g.
+
+26. Qual comando para desligar o sistema?
+O comando para desligar o sistema é “sudo poweroff”. É possível ainda dizer o tempo (em minutos) que você deseja que ele seja desligado, acrescentando -h e ainda exibir uma mensagem de aviso sem seguida.
+Exemplo:
+guifraga@guifraga-VirtualBox:~$ sudo poweroff -h 1 “O sistema será desligado em 1 minuto”
